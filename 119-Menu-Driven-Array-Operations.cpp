@@ -407,6 +407,7 @@ int main()
     case 5:
       arr1->Display();
     }
-  } while (ch < 6);
+  } while (ch != 6);
+
   return 0;
 }
