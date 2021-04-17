@@ -15,6 +15,7 @@ void swap(char &a, char &b)
   a = b;
   b = temp;
 }
+
 void permutations(string s, int low, int high)
 {
   if (low == high) // --> Printing the results when low == high
