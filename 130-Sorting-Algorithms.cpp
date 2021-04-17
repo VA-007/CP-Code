@@ -46,6 +46,7 @@ void bubbleSort(vector<int> &arr)
       break;
   }
 }
+
 // <-------- BUBBLE SORT RECURSIVE -------->
 void bubbleRecursive(vector<int> &arr, int n)
 {
@@ -103,12 +104,12 @@ int partition(vector<int> &arr, int low, int high)
     do
     {
       i++;
-    } while (arr[i] <= pivot); // i finds element greater than the pivot element.
+    } while (arr[i] <= pivot && i < high); // i finds element greater than the pivot element.
 
     do
     {
       j--;
-    } while (arr[j] > pivot); // j finds the element smaller than or equal to pivot element.
+    } while (arr[j] > pivot && j > low); // j finds the element smaller than or equal to pivot element.
 
     if (i < j)
     {
@@ -277,9 +278,9 @@ main()
   // display(arr3);
 
   // --> Quick
-  // display(arr3);
-  // quickSort(arr3, 0, arr3.size());
-  // display(arr3);
+  display(arr3);
+  quickSort(arr3, 0, arr3.size());
+  display(arr3);
 
   // --> Merge Iterative
   // display(arr3);
@@ -297,9 +298,9 @@ main()
   // display(arr3);
 
   // --> Shell
-  display(arr3);
-  shellSort(arr3);
-  display(arr3);
+  // display(arr3);
+  // shellSort(arr3);
+  // display(arr3);
 
   return 0;
 }
